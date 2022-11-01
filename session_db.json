@@ -12,21 +12,129 @@
       "data": {
         "__scenes": {},
         "type": "create",
-        "count": 10
+        "count": 12,
+        "answers": [
+          "1. 0",
+          "2. 0",
+          "3. Нет",
+          "4. 3-10",
+          "5. фыццфыв",
+          "6. 100 - 150к",
+          "7. Физлицо в статусе ИП",
+          "8. -",
+          "9. Да",
+          "10. просто",
+          "11. нового",
+          "12. -"
+        ],
+        "chatId": 1159742269,
+        "username": "ppayko",
+        "user": {
+          "fist_name": "pavel",
+          "id": 1159742269,
+          "lastname": "payko",
+          "username": "ppayko"
+        },
+        "cv": "BQACAgIAAxkBAAIF_WNbzWIyx9LHCbETk4fiUbgrzHczAAIZHQACL3XhSpQCN7ATeKZSKgQ"
       }
     },
     {
       "id": "1182528963:1182528963",
       "data": {
         "__scenes": {},
-        "type": "create"
+        "type": "create",
+        "count": 10,
+        "answers": [
+          "1. 0",
+          "2. 0",
+          "3. Да",
+          "4. 1-3",
+          "5. defd",
+          "6. 50 - 100к",
+          "7. Физлицо",
+          "8. Да",
+          "9. Да",
+          "10. asdfghj"
+        ],
+        "chatId": 1182528963,
+        "username": "ValeriBondareva",
+        "user": {
+          "fist_name": "Валерия",
+          "id": 1182528963,
+          "lastname": "Бондарева",
+          "username": "ValeriBondareva"
+        }
       }
     },
     {
       "id": "228770154:228770154",
       "data": {
         "__scenes": {},
-        "count": 0
+        "count": 10,
+        "answers": [
+          "1. 1-3 года",
+          "2. 1-3 года",
+          "3. Да",
+          "4. 3-10",
+          "5. Тимлид",
+          "6. 50 - 100к",
+          "7. Самозанятый",
+          "8. Да",
+          "9. Да",
+          "10. ух незнаю где оно"
+        ],
+        "chatId": 228770154,
+        "user": {
+          "fist_name": "Igor",
+          "id": 228770154,
+          "username": "khigor777"
+        }
+      }
+    },
+    {
+      "id": "748324430:748324430",
+      "data": {
+        "__scenes": {},
+        "count": 10,
+        "answers": [
+          "1. 0",
+          "2. 0",
+          "3. Нет",
+          "4. 1-3",
+          "5. лупень",
+          "6. 50 - 100к",
+          "7. Самозанятый",
+          "8. Нет",
+          "9. Да",
+          "10. 123"
+        ],
+        "chatId": 748324430,
+        "user": {
+          "fist_name": "Alexander",
+          "id": 748324430
+        }
+      }
+    },
+    {
+      "id": "682378704:682378704",
+      "data": {
+        "__scenes": {},
+        "count": 10,
+        "answers": [
+          "1. 0",
+          "2. 0",
+          "3. Да",
+          "4. 1-3",
+          "5. fdsf",
+          "6. 50 - 100к",
+          "7. Физлицо",
+          "8. Да",
+          "9. Да",
+          "10. -"
+        ],
+        "chatId": 682378704,
+        "username": "ms_potap",
+        "cv": "BQACAgIAAxkBAAIFKWNbt1ZMffabX3sNcbzmL1PBlZbxAALdHwAC1XbgSqiE1p21cpDzKgQ"
       }
     }
   ]

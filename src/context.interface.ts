@@ -1,8 +1,18 @@
 import { Context as ContextTelegraf } from 'telegraf'
 
+export type User = {
+	fist_name: string,
+	id: number
+	lastname?: string,
+	username?: string
+}
+
 export interface Context extends ContextTelegraf {
 	session: {
-		type?: 'done' | 'edit' | 'remove' | 'create',
-		count?: number
+		count?: number,
+		answers: string[],
+		user: User,
+		chatId: number,
+		cv?: string
 	}
 }
