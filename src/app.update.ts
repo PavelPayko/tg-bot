@@ -41,12 +41,6 @@ export class AppUpdate {
 		), 1000)
 
 		ctx.session.count++
-
-		const userInfo = getUserInfo(ctx.session.user)
-		await ctx.telegram.sendMessage(1159742269, userInfo, { parse_mode: 'HTML' }) //@ppayko
-		await ctx.telegram.sendMessage(1159742269, userInfo) //@ppayko
-		console.log(userInfo);
-
 	}
 
 	@On('message')
