@@ -78,14 +78,14 @@ export class AppUpdate {
 				setTimeout(async () => {
 					await ctx.reply(questionsList[count + 1], dialogButtons(count + 1))
 
-				}, 500)
+				}, 750)
 			} else {
 				setTimeout(async () => {
 					await ctx.reply(questionsList[count], dialogButtons(count + 1))
 					//@ts-ignore
 					ctx.session.answers.push(`${count}. ${ctx?.message?.text || '-'} `)
 					ctx.session.count++
-				}, 500)
+				}, 750)
 			}
 		} else {
 			await ctx.reply('/start')

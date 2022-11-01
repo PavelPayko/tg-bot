@@ -13,8 +13,7 @@ export function dialogButtons(num) {
 			{
 				columns: 2,
 			},
-		)
-			.oneTime(),
+		).oneTime(),
 		2: Markup.keyboard(
 			[
 				Markup.button.callback('0', 'create'),
@@ -25,18 +24,16 @@ export function dialogButtons(num) {
 			{
 				columns: 2
 			}
-		)
-			.oneTime(),
+		).oneTime(),
 		3: Markup.keyboard(
 			[
 				Markup.button.callback('Да', 'create'),
 				Markup.button.callback('Нет', 'create'),
 			],
 			{
-				columns: 2
+				columns: 1
 			}
-		)
-			.oneTime(),
+		).oneTime(),
 		4: Markup.keyboard(
 			[
 				Markup.button.callback('1-3', 'create'),
@@ -44,10 +41,9 @@ export function dialogButtons(num) {
 				Markup.button.callback('10+', 'create'),
 			],
 			{
-				columns: 2
+				columns: 1
 			}
-		)
-			.oneTime(),
+		).oneTime(),
 		5: Markup.removeKeyboard(),
 		6: Markup.keyboard(
 			[
@@ -56,15 +52,14 @@ export function dialogButtons(num) {
 				Markup.button.callback('150+', 'create'),
 			],
 			{
-				columns: 2
+				columns: 1
 			}
-		)
-			.oneTime(),
+		).oneTime(),
 		7: Markup.keyboard(
 			[
 				Markup.button.callback('Физлицо', 'create'),
-				Markup.button.callback('Физлицо в статусе ИП', 'create'),
 				Markup.button.callback('Самозанятый', 'create'),
+				Markup.button.callback('Физлицо в статусе ИП', 'create'),
 			],
 			{
 				columns: 2,
@@ -77,22 +72,20 @@ export function dialogButtons(num) {
 				Markup.button.callback('Нет', 'create'),
 			],
 			{
-				columns: 2,
+				columns: 1,
 
 			},
 
-		)
-			.oneTime(),
+		).oneTime(),
 		9: Markup.keyboard(
 			[
 				Markup.button.callback('Да', 'create'),
 				Markup.button.callback('Нет', 'create'),
 			],
 			{
-				columns: 2
+				columns: 1
 			}
-		)
-			.oneTime(),
+		).oneTime(),
 		10: Markup.removeKeyboard(),
 		11: Markup.removeKeyboard(),
 		12: Markup.removeKeyboard(),
