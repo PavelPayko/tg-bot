@@ -29,7 +29,10 @@ export function dialogButtons(num) {
 			[
 				Markup.button.callback('Да', 'create'),
 				Markup.button.callback('Нет', 'create'),
-			]
+			],
+			{
+				columns: 2,
+			}
 		).oneTime(),
 		4: Markup.keyboard(
 			[
@@ -38,7 +41,7 @@ export function dialogButtons(num) {
 				Markup.button.callback('10+', 'create'),
 			],
 			{
-				columns: 1
+				columns: 3
 			}
 		).oneTime(),
 		5: Markup.removeKeyboard(),
@@ -49,7 +52,7 @@ export function dialogButtons(num) {
 				Markup.button.callback('150+', 'create'),
 			],
 			{
-				columns: 1
+				columns: 3
 			}
 		).oneTime(),
 		7: Markup.keyboard(
@@ -69,7 +72,7 @@ export function dialogButtons(num) {
 				Markup.button.callback('Нет', 'create'),
 			],
 			{
-				columns: 1,
+				columns: 2,
 
 			},
 
@@ -80,7 +83,8 @@ export function dialogButtons(num) {
 				Markup.button.callback('Нет', 'create'),
 			],
 			{
-				columns: 1
+				columns: 2,
+
 			}
 		).oneTime(),
 		10: Markup.removeKeyboard(),
