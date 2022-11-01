@@ -29,10 +29,7 @@ export function dialogButtons(num) {
 			[
 				Markup.button.callback('Да', 'create'),
 				Markup.button.callback('Нет', 'create'),
-			],
-			{
-				columns: 1
-			}
+			]
 		).oneTime(),
 		4: Markup.keyboard(
 			[
