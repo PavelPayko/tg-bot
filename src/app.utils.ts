@@ -31,5 +31,5 @@ export const getUserInfo = (user: User) => `
 			Никнейм: ${user?.username ? '@' + user.username : '🤐'}
 			Имя: ${user?.fist_name || '🤐'}
 			Фамилия: ${user?.lastname || '🤐'}
-			Профиль: <a href= "tg://user?id=${user?.id}" > ${user?.fist_name || ''}${user.lastname ? ' ' + user.lastname : ''} < /a>
+			Профиль: <a href="tg://user?id=${user?.id}" > ${user?.fist_name || 'noname'}${user.lastname ? ' ' + user.lastname : ''} </a>
 				` 
