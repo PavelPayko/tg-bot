@@ -13,7 +13,6 @@ import { dialogButtons } from './app.buttons'
 import { AppService } from './app.service'
 import { feedback, getUserInfo, greet, questionsList } from './app.utils'
 import { Context } from './context.interface'
-import photo from '../assets/Kvando_photo.jpg'
 
 @Update()
 export class AppUpdate {
@@ -37,7 +36,8 @@ export class AppUpdate {
 
 		await ctx.reply(greet(ctx.message.from.first_name))
 
-		await ctx.replyWithPhoto(photo)
+		await ctx.replyWithPhoto('https://habrastorage.org/getpro/moikrug/uploads/redactor_image/07102021/images/1d3f8e9db6a384ee70c343e40fefd25f.jpg')
+		await ctx.reply('https://career.habr.com/companies/kvando')
 
 		setTimeout(async () => (
 			await ctx.reply(questionsList[0], dialogButtons(1))
