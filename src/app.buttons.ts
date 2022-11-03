@@ -172,3 +172,13 @@ export const vacancyButtons = Markup.keyboard(
 		columns: 2,
 	},
 ).oneTime()
+
+export const getQuesionsListButtons = Markup.keyboard(
+	[
+		Markup.button.callback('фронт', 'create'),
+		Markup.button.callback('бэк', 'create')
+	],
+	{
+		columns: 2,
+	},
+).oneTime()

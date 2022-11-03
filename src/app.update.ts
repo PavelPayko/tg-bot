@@ -9,7 +9,7 @@ import {
 } from 'nestjs-telegraf'
 import { Telegraf } from 'telegraf'
 import { setTimeout } from 'timers'
-import { dialogButtonsData, vacancyButtons } from './app.buttons'
+import { dialogButtonsData, getQuesionsListButtons, vacancyButtons } from './app.buttons'
 import { AppService } from './app.service'
 import { feedback, getUserInfo, greet, questionsListData } from './app.utils'
 import { Context } from './context.interface'
@@ -62,6 +62,30 @@ export class AppUpdate {
 		const questionsList = questionsListData[ctx.session.vacancy]
 		const dialogButtons = dialogButtonsData[ctx.session.vacancy]
 		await ctx.reply(questionsList[0], dialogButtons[0])
+	}
+
+	@Hears(['Вопросы'])
+	async setQuestionsList(ctx: Context) {
+		//@ts-ignore
+		ctx.session.vacancy = ctx.message.text
+		ctx.session.count = 1
+		ctx.session.answers = []
+		// console.log(ctx.message);
+		const count = ctx.session.count
+		const questionsList = questionsListData[ctx.session.vacancy]
+		const dialogButtons = dialogButtonsData[ctx.session.vacancy]
+		await ctx.reply('', getQuesionsListButtons)
+	}
+
+	@Hears(['фронт'])
+	async sendFrontQuestionsList(ctx: Context) {
+		const questionsList = questionsListData['Frontend']
+		await ctx.reply(questionsList.join('\n'))
+	}
+	@Hears(['бэк'])
+	async sendBackQuestionsList(ctx: Context) {
+		const questionsList = questionsListData['Backend']
+		await ctx.reply(questionsList.join('\n'))
 	}
 
 	@On('message')
