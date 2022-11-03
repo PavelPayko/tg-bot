@@ -1,20 +1,10 @@
 import { Markup } from 'telegraf'
 
-export function dialogButtons(num) {
-	const buttons = {
+export const dialogButtonsData = {
+	Frontend: {
+		remove: Markup.removeKeyboard(),
 		0: Markup.removeKeyboard(),
 		1: Markup.keyboard(
-			[
-				Markup.button.callback('0', 'create',),
-				Markup.button.callback('1-3 года', 'create'),
-				Markup.button.callback('3-6 лет', 'create'),
-				Markup.button.callback('6+ лет', 'create'),
-			],
-			{
-				columns: 2,
-			},
-		).oneTime(),
-		2: Markup.keyboard(
 			[
 				Markup.button.callback('0', 'create'),
 				Markup.button.callback('1-3 года', 'create'),
@@ -25,7 +15,7 @@ export function dialogButtons(num) {
 				columns: 2
 			}
 		).oneTime(),
-		3: Markup.keyboard(
+		2: Markup.keyboard(
 			[
 				Markup.button.callback('Да', 'create'),
 				Markup.button.callback('Нет', 'create'),
@@ -34,7 +24,7 @@ export function dialogButtons(num) {
 				columns: 2,
 			}
 		).oneTime(),
-		4: Markup.keyboard(
+		3: Markup.keyboard(
 			[
 				Markup.button.callback('1-3', 'create'),
 				Markup.button.callback('3-10', 'create'),
@@ -44,8 +34,8 @@ export function dialogButtons(num) {
 				columns: 3
 			}
 		).oneTime(),
-		5: Markup.removeKeyboard(),
-		6: Markup.keyboard(
+		4: Markup.removeKeyboard(),
+		5: Markup.keyboard(
 			[
 				Markup.button.callback('50 - 100к', 'create'),
 				Markup.button.callback('100 - 150к', 'create'),
@@ -55,7 +45,7 @@ export function dialogButtons(num) {
 				columns: 3
 			}
 		).oneTime(),
-		7: Markup.keyboard(
+		6: Markup.keyboard(
 			[
 				Markup.button.callback('Физлицо', 'create'),
 				Markup.button.callback('Самозанятый', 'create'),
@@ -66,7 +56,7 @@ export function dialogButtons(num) {
 			}
 		)
 			.oneTime(),
-		8: Markup.keyboard(
+		7: Markup.keyboard(
 			[
 				Markup.button.callback('Да', 'create'),
 				Markup.button.callback('Нет', 'create'),
@@ -77,7 +67,7 @@ export function dialogButtons(num) {
 			},
 
 		).oneTime(),
-		9: Markup.keyboard(
+		8: Markup.keyboard(
 			[
 				Markup.button.callback('Да', 'create'),
 				Markup.button.callback('Нет', 'create'),
@@ -87,10 +77,98 @@ export function dialogButtons(num) {
 
 			}
 		).oneTime(),
+		9: Markup.removeKeyboard(),
 		10: Markup.removeKeyboard(),
 		11: Markup.removeKeyboard(),
-		12: Markup.removeKeyboard(),
-	}
+	},
+	Backend: {
+		remove: Markup.removeKeyboard(),
+		0: Markup.removeKeyboard(),
+		1: Markup.keyboard(
+			[
+				Markup.button.callback('0', 'create'),
+				Markup.button.callback('1-3 года', 'create'),
+				Markup.button.callback('3-6 лет', 'create'),
+				Markup.button.callback('6+ лет', 'create'),
+			],
+			{
+				columns: 2
+			}
+		).oneTime(),
+		2: Markup.keyboard(
+			[
+				Markup.button.callback('Да', 'create'),
+				Markup.button.callback('Нет', 'create'),
+			],
+			{
+				columns: 2,
+			}
+		).oneTime(),
+		3: Markup.keyboard(
+			[
+				Markup.button.callback('1-3', 'create'),
+				Markup.button.callback('3-10', 'create'),
+				Markup.button.callback('10+', 'create'),
+			],
+			{
+				columns: 3
+			}
+		).oneTime(),
+		4: Markup.removeKeyboard(),
+		5: Markup.keyboard(
+			[
+				Markup.button.callback('50 - 100к', 'create'),
+				Markup.button.callback('100 - 150к', 'create'),
+				Markup.button.callback('150+', 'create'),
+			],
+			{
+				columns: 3
+			}
+		).oneTime(),
+		6: Markup.keyboard(
+			[
+				Markup.button.callback('Физлицо', 'create'),
+				Markup.button.callback('Самозанятый', 'create'),
+				Markup.button.callback('Физлицо в статусе ИП', 'create'),
+			],
+			{
+				columns: 2,
+			}
+		)
+			.oneTime(),
+		7: Markup.keyboard(
+			[
+				Markup.button.callback('Да', 'create'),
+				Markup.button.callback('Нет', 'create'),
+			],
+			{
+				columns: 2,
 
-	return buttons[num]
+			},
+
+		).oneTime(),
+		8: Markup.keyboard(
+			[
+				Markup.button.callback('Да', 'create'),
+				Markup.button.callback('Нет', 'create'),
+			],
+			{
+				columns: 2,
+
+			}
+		).oneTime(),
+		9: Markup.removeKeyboard(),
+		10: Markup.removeKeyboard(),
+		11: Markup.removeKeyboard(),
+	}
 }
+
+export const vacancyButtons = Markup.keyboard(
+	[
+		Markup.button.callback('Frontend', 'create'),
+		Markup.button.callback('Backend', 'create')
+	],
+	{
+		columns: 2,
+	},
+).oneTime()

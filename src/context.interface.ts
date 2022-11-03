@@ -13,6 +13,7 @@ export interface Context extends ContextTelegraf {
 		answers: string[],
 		user: User,
 		chatId: number,
+		vacancy?: 'Frontend' | 'Backend'
 		cv?: string
 	}
 }
