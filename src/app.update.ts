@@ -13,6 +13,7 @@ import { dialogButtons } from './app.buttons'
 import { AppService } from './app.service'
 import { feedback, getUserInfo, greet, questionsList } from './app.utils'
 import { Context } from './context.interface'
+import photo from '../assets/Kvando_photo.jpg'
 
 @Update()
 export class AppUpdate {
@@ -35,6 +36,8 @@ export class AppUpdate {
 		}
 
 		await ctx.reply(greet(ctx.message.from.first_name))
+
+		await ctx.replyWithPhoto(photo)
 
 		setTimeout(async () => (
 			await ctx.reply(questionsList[0], dialogButtons(1))
