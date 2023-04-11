@@ -113,7 +113,7 @@ export class AppUpdate {
 			const userVacancy = `Вакансия: ${ctx.session?.vacancy}`
 
 			//@ts-ignore
-			await ctx.telegram.sendMessage(1182528963, `${userInfo}\n${userVacancy}\n${answers}`, { parse_mode: 'HTML' }) // @ValeriBondareva
+			// await ctx.telegram.sendMessage(1182528963, `${userInfo}\n${userVacancy}\n${answers}`, { parse_mode: 'HTML' }) // @ValeriBondareva
 			await ctx.telegram.sendMessage(1159742269, `${userInfo}\n${userVacancy}\n${answers}`, { parse_mode: 'HTML' }) //@ppayko
 			//@ts-ignore
 			cv && await ctx.telegram.sendDocument(1182528963, ctx.message.document.file_id) && await ctx.telegram.sendDocument(1159742269, ctx.message.document.file_id)
