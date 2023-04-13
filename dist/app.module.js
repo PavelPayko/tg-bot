@@ -29,7 +29,7 @@ AppModule = __decorate([
             typeorm_1.TypeOrmModule.forRoot({
                 type: 'postgres',
                 host: 'localhost',
-                port: 5432,
+                port: 5433,
                 database: 'todo-app-tg-bot',
                 username: 'postgres',
                 password: 'admin',

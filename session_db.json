@@ -12,20 +12,9 @@
       "data": {
         "__scenes": {},
         "type": "create",
-        "count": 12,
+        "count": 2,
         "answers": [
-          "1. 0",
-          "2. 0",
-          "3. Нет",
-          "4. 3-10",
-          "5. фыццфыв",
-          "6. 100 - 150к",
-          "7. Физлицо в статусе ИП",
-          "8. -",
-          "9. Да",
-          "10. просто",
-          "11. нового",
-          "12. -"
+          "1. React "
         ],
         "chatId": 1159742269,
         "username": "ppayko",
@@ -35,7 +24,8 @@
           "lastname": "payko",
           "username": "ppayko"
         },
-        "cv": "BQACAgIAAxkBAAIF_WNbzWIyx9LHCbETk4fiUbgrzHczAAIZHQACL3XhSpQCN7ATeKZSKgQ"
+        "cv": "BQACAgIAAxkBAAIF_WNbzWIyx9LHCbETk4fiUbgrzHczAAIZHQACL3XhSpQCN7ATeKZSKgQ",
+        "vacancy": "Frontend"
       }
     },
     {

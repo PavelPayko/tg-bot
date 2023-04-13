@@ -19,7 +19,7 @@ const sessions = new LocalSession({ database: 'session_db.json' })
 		TypeOrmModule.forRoot({
 			type: 'postgres',
 			host: 'localhost',
-			port: 5432,
+			port: 5433,
 			database: 'todo-app-tg-bot',
 			username: 'postgres',
 			password: 'admin',
