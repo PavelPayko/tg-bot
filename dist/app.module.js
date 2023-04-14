@@ -8,14 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
-const typeorm_1 = require("@nestjs/typeorm");
 const nestjs_telegraf_1 = require("nestjs-telegraf");
-const path_1 = require("path");
 const LocalSession = require("telegraf-session-local");
 const app_service_1 = require("./app.service");
 const app_update_1 = require("./app.update");
 const config_1 = require("./config");
-const task_entity_1 = require("./task.entity");
 const sessions = new LocalSession({ database: 'session_db.json' });
 let AppModule = class AppModule {
 };
@@ -26,18 +23,6 @@ AppModule = __decorate([
                 middlewares: [sessions.middleware()],
                 token: config_1.TG_TOKEN
             }),
-            typeorm_1.TypeOrmModule.forRoot({
-                type: 'postgres',
-                host: 'localhost',
-                port: 5433,
-                database: 'todo-app-tg-bot',
-                username: 'postgres',
-                password: 'admin',
-                entities: [(0, path_1.join)(__dirname, '**', '*.entity.{ts,js}')],
-                migrations: [(0, path_1.join)(__dirname, '**', '*.migration.{ts,js}')],
-                synchronize: true
-            }),
-            typeorm_1.TypeOrmModule.forFeature([task_entity_1.TaskEntity])
         ],
         providers: [app_service_1.AppService, app_update_1.AppUpdate]
     })
